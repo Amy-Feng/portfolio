@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Amy-Feng.github.io/portfolio/",
+  "homepage": "https://amy-feng.github.io/portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
