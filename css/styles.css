@@ -1,0 +1,41 @@
+.vanta-pos {
+  position: fixed;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Puts it behind other content */
+}
+
+.text-pink {
+    color:#f4619c;
+}
+.btn-outline-pink{
+    border-color:#f4619c;
+}
+.btn-outline-pink:hover{
+    border-color:#f4619c;
+    background-color: #f4619c;
+    color:white;
+}
+.text-darkpink{
+    color:#32153c;
+}
+.text-darkpink:hover{
+    color:#f4619c;
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 4px #5f1c37; 
+}
+.bg-pink{
+    background-color: rgba(244, 97, 156, 0.7);
+}
+.bg-darkpink{
+    background-color: #32153c;
+    transition: background-color 0.3s ease;
+}
+.bg-darkpink:hover{
+    background-color: rgb(244, 97, 156);
+    ;
+}
