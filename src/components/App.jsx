@@ -8,8 +8,8 @@ function App() {
     <> 
       <Navbar />
       <Routes>
-        <Route path="/about" element={<Header />} /> 
-        <Route path="*" element={<Navigate to="/about" />} /> 
+        <Route index element={<Header />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
