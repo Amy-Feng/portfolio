@@ -1,41 +1,256 @@
-.vanta-pos {
-  position: fixed;
-  width: 100%;
-  height: 70vh;
+/* Color Variables */
+:root {
+    --pink: #f4619c;
+    --darkpink: #d14b82;
+    --darkpurple: #32153c;
+    --lightpink: rgba(244, 97, 156, 0.1);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px; /* For fixed navbar */
+}
+
+footer {
+  margin-top: auto; /* Pushes footer to bottom */
+}
+
+/* Text Colors */
+.text-pink {
+    color: var(--pink) !important;
+}
+
+.text-darkpurple {
+    color: var(--darkpurple) !important;
+}
+
+/* Background Colors */
+.bg-pink {
+    background-color: var(--pink) !important;
+}
+
+.bg-darkpurple {
+    background-color: var(--darkpurple) !important;
+}
+
+.bg-lightpink {
+    background-color: var(--lightpink) !important;
+}
+
+/* Button Styles */
+.btn-pink {
+    background-color: var(--pink);
+    border-color: var(--pink);
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: var(--darkpink);
+    border-color: var(--darkpink);
+    color: white;
+}
+
+.btn-outline-pink {
+    border-color: var(--pink);
+    color: var(--pink);
+}
+
+.btn-outline-pink:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--darkpurple) 0%, #5f1c37 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-text {
+    text-shadow: 2px 2px 4px rgba(95, 28, 55, 0.7);
+}
+
+.profile-img {
+    max-width: 350px;
+    border: 5px solid var(--pink);
+}
+
+/* Section Headers */
+.section-header h2 {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--pink);
+}
+
+/* Skill Cards */
+.skill-card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Project Cards */
+.project-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+#contactForm .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+#contactForm .form-control:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 0.25rem rgba(244, 97, 156, 0.25);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 36px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .profile-img {
+        margin-top: 30px;
+        max-width: 250px;
+    }
+}
+/* 玻璃态效果 */
+.glass-morphism-effect {
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Puts it behind other content */
+  width: 100%;
+  height: 100%;
+  background: rgba(50, 21, 60, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 0;
 }
 
-.text-pink {
-    color:#f4619c;
-}
-.btn-outline-pink{
-    border-color:#f4619c;
-}
-.btn-outline-pink:hover{
-    border-color:#f4619c;
-    background-color: #f4619c;
-    color:white;
-}
-.text-darkpink{
-    color:#32153c;
-}
-.text-darkpink:hover{
-    color:#f4619c;
+/* 渐变色名字 */
+.text-gradient-pink {
+  background: linear-gradient(45deg, #f4619c, #ffa9bf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 
-.text-shadow{
-    text-shadow: 2px 2px 4px #5f1c37; 
+/* 打字机效果 */
+.typewriter-text {
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.8);
+  min-height: 2rem;
 }
-.bg-pink{
-    background-color: rgba(244, 97, 156, 0.7);
+.cursor {
+  animation: blink 1s infinite;
 }
-.bg-darkpink{
-    background-color: #32153c;
-    transition: background-color 0.3s ease;
+
+/* 悬浮图片效果 */
+.hero-image-container {
+  position: relative;
+  perspective: 1000px;
 }
-.bg-darkpink:hover{
-    background-color: rgb(244, 97, 156);
-    ;
+.hero-main-img {
+  border: 3px solid rgba(244,97,156,0.3);
+  transform: rotateY(-5deg) rotateX(5deg);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+.hero-image-container:hover .hero-main-img {
+  transform: rotateY(0) rotateX(0);
+  box-shadow: 0 25px 50px -12px rgba(244,97,156,0.25);
+}
+
+
+
+/* 发光按钮 */
+
+.btn-glass-pink {
+  background: rgba(244,97,156,0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(244,97,156,0.3);
+  transition: all 0.3s ease;
+}
+.btn-glass-pink:hover {
+  background: rgba(244,97,156,0.2);
+  border-color: var(--pink);
+}
+.shrink{
+  width:30vw;
+}
+
+.hover-pink {
+  transition: color 0.2s ease;
+  color: #f4619c !important;
+}
+.hover-pink:hover {
+  color: #5f0c2d !important;
+  text-decoration: underline !important;
+}
+
+a{
+  text-decoration: none;
+}
+
+shrink2{
+  width:30vw;
 }
